@@ -31,7 +31,7 @@ app.use(session({
 //authentication controller 
 const {user, registerUser, loginUser, logout} = ac;
 //reviews controller
-const { addReview, allReviews, deleteReview} = rc; 
+const { addReview, allReviews, deleteReview, editReview} = rc; 
 
 //auth endpoints
 app.get("/auth/user", user);
@@ -43,7 +43,7 @@ app.get("/auth/logout", logout);
 app.post("/api/reviews", addReview);
 app.get("/api/reviews", allReviews);
 app.delete("/api/reviews/:review_id", deleteReview)
-// app.put("/api/reviews/:review_id", editReview)
+app.put("/api/reviews/:review_id", editReview)
 
 
 app.listen(SERVER_PORT, () => {

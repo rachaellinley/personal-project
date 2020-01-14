@@ -27,27 +27,31 @@ async function deleteReview(req, res) {
     res.status(200).json(updatedReviews);
   }
 
-//   async function editReview(req, res) {
-//     const { title, content } = req.body;
-//     const review_id = +req.params.review_id;
-//     const user_id = req.session.user.user_id;
+  async function editReview(req, res) {
+    const { title, content } = req.body;
+    const review_id = +req.params.review_id;
+    const user_id = req.session.user.user_id;
+    console.log(user_id);
+    console.log(typeof user_id)
   
-//     const db = req.app.get("db");
+    const db = req.app.get("db");
   
-//     const editedReview = await db.reviews.editReview([
-//       title,
-//       content,
-//       user_id,
-//       review_id
-//     ])
-  
-//     res.status(200).json(editedReview);
-//   }
+    const editedReview = await db.reviews.editReview([
+      title,
+      content,
+      review_id,
+      user_id
+    ])
+    console.log(editedReview)
+    res.status(200).json(editedReview);
+  }
+
+ 
 
 module.exports = {
     addReview,
     allReviews,
     deleteReview,
-    // editReview
+    editReview
 
 }

@@ -1,6 +1,5 @@
 UPDATE reviews
 SET
- title = $1,
- content = $2,
-
-WHERE review_id = $4;
+ brand = $1,
+ content = $2
+WHERE review_id = $3 and user_id = $4;

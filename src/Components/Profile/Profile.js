@@ -1,21 +1,23 @@
 import React, { Component } from 'react';
 
 
-class AllReviews extends Component {
+class Profile extends Component {
     constructor () {
         super();
         this.state = {
             
         }
+
     }
+
 
 render() {
     return (
         <div>
-            <h1>All Reviews</h1>
+            <h1>Welcome to your Profile! Where you can see all your reviews</h1>
         </div>
     )
 }
 }
 
-export default AllReviews;
+export default Profile;
