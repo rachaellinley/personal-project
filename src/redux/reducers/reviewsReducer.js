@@ -39,9 +39,9 @@ export function deleteReview(review_id) {
   }
 }
 
-export function getAllReviewsByUsername(username) {
+export function getReviewsByUsername(username) {
   return {
-    type: GET_ALL_REVIEWS_BY_USERNAME,
+    type: GET_REVIEWS_BY_USERNAME,
     payload: Axios.get(`/api/reviews/${username}`)
   }
 }
@@ -57,6 +57,7 @@ export default function reducer(state = initialState, action) {
       }
     }
     case `${GET_ALL_REVIEWS}_FULFILLED`: {
+      console.log(payload.data)
       return {
         ...state,
         reviews: payload.data

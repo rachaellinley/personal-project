@@ -14,7 +14,11 @@ class Education extends Component {
 render() {
     return (
         <div>
-            <h1> This is where we learn </h1>
+            <h1> What's in your skincare products? </h1>
+            <h2>salskdfjsd</h2>
+            <p>asdjalksjdfalskdfjasldkf</p>
+            <h2>dlskfj</h2>
+            <p>sdkjflskjflsdjflskdjfksdjflsk</p>
             
         </div>
     )

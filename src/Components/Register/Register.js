@@ -18,6 +18,7 @@ render() {
             <h1> Please Register </h1>
             <input placeholder="username"/>
             <input placeholder="password"/>
+            <input placeholder="first name"/>
             <button>Register</button>
             <Link to='/AllReviews'><h1>Continue as Guest</h1></Link>
         </div>
