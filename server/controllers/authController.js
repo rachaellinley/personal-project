@@ -8,7 +8,7 @@ async function user(req, res) {
 
 //register user 
 async function registerUser(req, res) {
-    const { username, password } = req.body;
+    const { username, password, first_name } = req.body;
     const db = req.app.get("db");
   
     // check for the username
@@ -26,13 +26,15 @@ async function registerUser(req, res) {
       // store the new user into the database
       const newUser = await db.auth.registerUser([
         username,
-        hash
+        hash,
+        first_name
       ])
   
       // store the new user on session
       req.session.user = {
         user_id: newUser[0].user_id,
-        username: newUser[0].username
+        username: newUser[0].username,
+        first_name: newUser[0].first_name
       }
       console.log(req.session.user);
       res.status(200).json(req.session.user)

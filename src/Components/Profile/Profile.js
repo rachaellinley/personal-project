@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import AddReview from "../AddReview/AddReview"
 
 class Profile extends Component {
     constructor () {
@@ -14,8 +14,11 @@ class Profile extends Component {
 render() {
     return (
         <div>
-            <h1>Welcome to your Profile! Where you can see all your reviews</h1>
+            <h1>Welcome to your Profile! Where you can see all your reviews and add a review.</h1>
+            <AddReview />            
+
         </div>
+        
     )
 }
 }

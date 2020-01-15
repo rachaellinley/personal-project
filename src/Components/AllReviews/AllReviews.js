@@ -24,6 +24,7 @@ render() {
         return (
         <div key={i}>
            <h2>Brand:{review.brand}</h2> 
+        <h3>Product: {review.product}</h3>
            <h3>Content:{review.content}</h3>
         </div>)})
 

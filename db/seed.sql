@@ -2,7 +2,7 @@
 CREATE table users (
 user_id SERIAL PRIMARY KEY,
 username VARCHAR(40) NOT NULL,
-hash TEXT
+hash TEXT,
 first_name VARCHAR
 )
 
@@ -13,6 +13,7 @@ CREATE table reviews (
     brand VARCHAR(200),
     content VARCHAR(1000),
     user_id INT REFERENCES users(user_id)
+    product VARCHAR
 )
 
 -- checkForUsername
@@ -20,15 +21,15 @@ SELECT * FROM users
 WHERE username = $1;
  
 -- registerUser
-INSERT INTO users (username, hash)
-VALUES ($1, $2);
+INSERT INTO users (username, hash, first_name)
+VALUES ($1, $2, $3);
  
  --getAllReviews 
  SELECT * from reviews; 
 
 -- addReview 
-INSERT INTO reviews (category_name, brand, content, user_id)
-VALUES ($1, $2, $3, $4)
+INSERT INTO reviews (category_name, brand, product, content, user_id)
+VALUES ($1, $2, $3, $4, $5)
  
 -- getReviewsByUser
 
@@ -40,9 +41,10 @@ WHERE username = $1;
 UPDATE reviews
 SET
  brand = $1,
- content = $2,
- user_id = $3,
-WHERE review_id = $4;
+ product = $2,
+ content = $3,
+ user_id = $4,
+WHERE review_id = $5;
  
  
 -- deleteReview
@@ -54,4 +56,3 @@ WHERE review_id = $1;
 SELECT * FROM reviews
 WHERE category_name = $1;
 
--- dummy data 
