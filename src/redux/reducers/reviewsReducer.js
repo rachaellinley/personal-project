@@ -1,5 +1,6 @@
 import Axios from "axios";
 
+
 const initialState = {
   reviews: [],
   loading: false
@@ -9,7 +10,7 @@ const GET_ALL_REVIEWS = "GET_ALL_REVIEWS";
 const ADD_REVIEW = "ADD_REVIEW";
 const EDIT_REVIEW = "EDIT_REVIEW";
 const DELETE_REVIEW = "DELETE_REVIEW";
-const GET_REVIEWS_BY_USERNAME = "GET_REVIEWS_BY_USERNAME";
+const USER_REVIEWS = "USER_REVIEWS";
 
 export function getAllReviews() {
   return {
@@ -39,10 +40,10 @@ export function deleteReview(review_id) {
   }
 }
 
-export function getReviewsByUsername(username) {
+export function userReviews() {
   return {
-    type: GET_REVIEWS_BY_USERNAME,
-    payload: Axios.get(`/api/reviews/${username}`)
+    type: USER_REVIEWS,
+    payload: Axios.get("/api/reviews/profile")
   }
 }
 
@@ -74,6 +75,18 @@ export default function reducer(state = initialState, action) {
         ...state,
         reviews: payload.data
       }
+    }
+    case `${USER_REVIEWS}_PENDING`: {
+      return {
+        ...state,
+        loading: true
+      }
+    }
+      case `${USER_REVIEWS}_FULFILLED`: {
+        return {
+          ...state,
+          reviews: payload.data
+        }
     }
     default:
       return state;

@@ -33,8 +33,10 @@ VALUES ($1, $2, $3, $4, $5)
  
 -- getReviewsByUser
 
-SELECT * FROM reviews
-WHERE username = $1;
+SELECT category_name, brand, content, product 
+FROM reviews
+INNER JOIN users
+ON reviews.user_id=users.user_id
  
  
 -- editReview

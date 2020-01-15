@@ -47,12 +47,18 @@ async function deleteReview(req, res) {
     res.status(200).json(editedReview);
   }
 
+async function userReviews (req, res){
+    const userReviews = await req.app.get('db').reviews.userReviews([req.session.user.user_id]);
+    return res.status(200).send(userReviews);
+}
+
  
 
 module.exports = {
     addReview,
     allReviews,
     deleteReview,
-    editReview
+    editReview,
+    userReviews
 
 }
