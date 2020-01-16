@@ -3,6 +3,7 @@ import Axios from "axios";
 
 const initialState = {
   reviews: [],
+  myReviews: [],
   loading: false
 }
 
@@ -46,7 +47,7 @@ export function userReviews() {
     payload: Axios.get("/api/reviews/profile")
   }
 }
-
+//reducer
 export default function reducer(state = initialState, action) {
   const { type, payload } = action;
 
@@ -85,9 +86,15 @@ export default function reducer(state = initialState, action) {
       case `${USER_REVIEWS}_FULFILLED`: {
         return {
           ...state,
-          reviews: payload.data
+          myReviews: payload.data
         }
     }
+    case `${DELETE_REVIEW}_FULFILLED`:
+      return{
+          ...state,
+          reviews: payload.data
+      }
+      
     default:
       return state;
   }

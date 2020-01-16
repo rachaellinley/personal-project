@@ -27,7 +27,7 @@ class AddReview extends Component {
         const { addReview } = this.props;
     
         addReview({ category_name, brand, product, content })
-        this.props.history.push("/AllReviews/")
+       
       }
 
 

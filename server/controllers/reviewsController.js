@@ -1,4 +1,4 @@
-const bcrypt = require("bcryptjs")
+// const bcrypt = require("bcryptjs")
 
 async function addReview (req, res){
     const { category_name, brand, product, content} = req.body;
@@ -18,13 +18,12 @@ async function allReviews(req, res){
 }
 
 async function deleteReview(req, res) {
-    const review_id = +req.params.review_id;
-    const user_id = req.session.user.user_id;
+   
     const db = req.app.get("db");
+    const {review_id} = req.params;
   
-    const updatedReviews = await db.reviews.deleteReview([review_id, user_id])
-  
-    res.status(200).json(updatedReviews);
+    const deleteReview = await db.reviews.deleteReview(review_id)
+    res.status(200).json(deleteReview);
   }
 
   async function editReview(req, res) {
