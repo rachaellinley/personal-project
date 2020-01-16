@@ -42,15 +42,17 @@ export function deleteReview(review_id) {
 }
 
 export function userReviews() {
+  console.log("GETTING REVIEWS");
   return {
     type: USER_REVIEWS,
     payload: Axios.get("/api/reviews/profile")
   }
 }
+
 //reducer
 export default function reducer(state = initialState, action) {
   const { type, payload } = action;
-
+  console.log(type, payload);
   switch (type) {
     case `${GET_ALL_REVIEWS}_PENDING`: {
       return {
@@ -72,9 +74,10 @@ export default function reducer(state = initialState, action) {
       }
     }
     case `${ADD_REVIEW}_FULFILLED`: {
+      console.log("review ran")
       return {
         ...state,
-        reviews: payload.data
+        myReviews: payload.data
       }
     }
     case `${USER_REVIEWS}_PENDING`: {
@@ -89,11 +92,28 @@ export default function reducer(state = initialState, action) {
           myReviews: payload.data
         }
     }
-    case `${DELETE_REVIEW}_FULFILLED`:
-      return{
-          ...state,
-          reviews: payload.data
+
+    case `${EDIT_REVIEW}_PENDING`: {
+      return {
+        ...state,
+        loading: true
       }
+    }
+
+    case `${EDIT_REVIEW}_FULFILLED`: {
+      return {
+        ...state,
+        reviews: payload.data,
+        loading: false
+      }
+    }
+    case `${DELETE_REVIEW}_FULFILLED`: {
+      console.log("ran delete")
+      return {
+          ...state,
+          myReviews: payload.data
+      }
+    }
       
     default:
       return state;

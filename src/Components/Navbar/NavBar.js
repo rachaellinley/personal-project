@@ -32,6 +32,8 @@ export default class NavBar extends React.Component {
                 <Link to="/profile/:user_id"><li className='menu-text'>Profile</li></Link>
                 <Link to="/Contact/"><li className='menu-text'>Contact</li></Link>
                 <Link to="/"><li className='menu-text'>Login</li></Link>
+                
+                
                 <li>
                     {/* <div id="image-box"> */}
                     <img
@@ -45,6 +47,7 @@ export default class NavBar extends React.Component {
                     <Link to="/profile/:user_id"><li>Profile</li></Link>
                     <Link to="/Contact/"><li>Contact</li></Link>
                     <Link to="/"><li>Login</li></Link>
+                   
                 </ul>
             </ul>
         </header> 

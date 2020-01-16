@@ -12,12 +12,14 @@ header {
 
 
 .drop-down-menu, .drop-down-menu-open, .drop-down-menu-closed{
-    width: 100vw;
-    height: 25vh;
+    width: 50vw;
+    height: 20vh;
     position: fixed;
-    left: 0px;
+    right: 0px;
+    text-decoration: none;
     top: 80px;
-    background:blue;
+    background: black;  
+    align-items: right;
     padding: 0px;
     margin: 0px;
     /* z-index: 2; */
@@ -39,7 +41,6 @@ header {
 }
 
 @keyframes openMenu{
-    /*target points in time in animation */
     0% {
         top: -1000px;
     }
@@ -65,7 +66,7 @@ header {
     display: flex;
 
 }
-/*transition is like an animation; allows us to animate something but transition dont handle
+/*transition is like an animation; allows us to animate something but transition doesn't handle
 starting or ending values 
 they don't change css properties, but define how the change occurs; 
 must be triggered to run by an action- click/hover/etc */
@@ -75,9 +76,6 @@ must be triggered to run by an action- click/hover/etc */
     margin-left: 10px;
     font-size: 25px;
     color: #fff;
-    
-
-
 }
 
 img {

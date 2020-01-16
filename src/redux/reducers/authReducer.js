@@ -28,6 +28,7 @@ export function registerUser(newUser) {
 }
 
 export function loginUser(user) {
+  console.log("LOGGING IN")
   return {
     type: LOGIN_USER,
     payload: Axios.post("/auth/login", user)

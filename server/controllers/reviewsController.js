@@ -6,9 +6,10 @@ async function addReview (req, res){
   
     const db = req.app.get("db");
   
-    const addedReview = await db.reviews.addReview([category_name, brand, product, content, user_id]);
-    console.log(addedReview)
-    res.status(200).json(addedReview);
+    await db.reviews.addReview([category_name, brand, product, content, user_id]);
+    const userReviews = await req.app.get('db').reviews.userReviews([req.session.user.user_id]);
+    // console.log(addedReview)
+    res.status(200).json(userReviews);
 }
 async function allReviews(req, res){
     const db = req.app.get("db");
@@ -22,8 +23,10 @@ async function deleteReview(req, res) {
     const db = req.app.get("db");
     const {review_id} = req.params;
   
-    const deleteReview = await db.reviews.deleteReview(review_id)
-    res.status(200).json(deleteReview);
+    await db.reviews.deleteReview(+review_id)
+    const userReviews = await req.app.get('db').reviews.userReviews([req.session.user.user_id]);
+    console.log(userReviews);
+    res.status(200).json(userReviews);
   }
 
   async function editReview(req, res) {
@@ -47,8 +50,18 @@ async function deleteReview(req, res) {
   }
 
 async function userReviews (req, res){
+  console.log("hit");
+  if(req.session.user) {
     const userReviews = await req.app.get('db').reviews.userReviews([req.session.user.user_id]);
-    return res.status(200).send(userReviews);
+    console.log(userReviews);
+    if(userReviews){
+      res.status(200).send(userReviews);
+    }else{
+      res.sendStatus(404)
+    }
+  } else {
+    res.sendStatus(500);
+  }
 }
 
  

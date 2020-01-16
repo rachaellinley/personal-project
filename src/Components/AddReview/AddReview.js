@@ -36,7 +36,7 @@ render() {
         <div>
             <h1> Add a Product Review </h1>
             <input name="category_name" placeholder="Category" value={this.state.category_name} onChange={this.handleChange}/>
-            <input name="brand" placeholder="Brand" value={this.state.bran} onChange={this.handleChange}/>
+            <input name="brand" placeholder="Brand" value={this.state.brand} onChange={this.handleChange}/>
             <input name="product" placeholder="Product" value={this.state.product} onChange={this.handleChange}/>
             <input name="content" placeholder="Content" value={this.state.content} onChange={this.handleChange}/>
             <button onClick={this.handleAddReview}>Add</button>

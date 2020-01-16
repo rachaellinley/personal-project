@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import {getAllReviews} from '../../redux/reducers/reviewsReducer';
+import "./AllReviews.css"
 
 
 
@@ -22,7 +23,8 @@ render() {
     const reviewsMapped = reviews.map((review, i) => {
         console.log(review) 
         return (
-        <div key={i}>
+        <div id="card" key={i}>
+            
            <h2>Brand:{review.brand}</h2> 
         <h3>Product: {review.product}</h3>
            <h3>Content:{review.content}</h3>
