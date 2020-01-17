@@ -4,7 +4,6 @@ import {getAllReviews} from '../../redux/reducers/reviewsReducer';
 import "./AllReviews.css"
 
 
-
 class AllReviews extends Component {
     constructor () {
         super();
@@ -32,6 +31,10 @@ render() {
 
     return (
         <div>
+            <h3>Search Reviews</h3>
+            <input placeholder="Search"></input>
+            <button> Go </button>
+            
             <h1>All Reviews</h1>
             {reviewsMapped}
         </div>

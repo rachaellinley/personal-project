@@ -20,6 +20,16 @@ export default class NavBar extends React.Component {
         }
     }
 
+    handleLinkClick = () => {
+        if(this.state.menuStatus === 'drop-down-menu-open'){
+            this.setState({
+                menuStatus: 'drop-down-menu-closed'
+            })
+        } else {
+            this.setState ({menuStatus: 'drop-down-menu-open'})
+        }
+    }
+
 
 
     render(){
@@ -42,11 +52,11 @@ export default class NavBar extends React.Component {
                     {/* </div> */}
                 </li>
                 <ul className={this.state.menuStatus}>
-                    <Link to="/AllReviews/" ><li>All Reviews</li></Link>
-                    <Link to="/Education/"><li>Learn</li></Link>
-                    <Link to="/profile/:user_id"><li>Profile</li></Link>
-                    <Link to="/Contact/"><li>Contact</li></Link>
-                    <Link to="/"><li>Login</li></Link>
+                    <Link to="/AllReviews/" onClick={this.handleLinkClick}><li>All Reviews</li></Link>
+                    <Link to="/Education/" onClick={this.handleLinkClick}><li>Learn</li></Link>
+                    <Link to="/profile/:user_id" onClick={this.handleLinkClick}><li>Profile</li></Link>
+                    <Link to="/Contact/" onClick={this.handleLinkClick}><li>Contact</li></Link>
+                    <Link to="/" onClick={this.handleLinkClick}><li>Login</li></Link>
                    
                 </ul>
             </ul>

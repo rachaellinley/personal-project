@@ -14,7 +14,7 @@ class Education extends Component {
 render() {
     return (
         <div>
-            <h2> What's in your products? </h2>
+            <h2> What's in your product? </h2>
             
             
         </div>
