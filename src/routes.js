@@ -16,7 +16,7 @@ export default (
         <Route component={AddReview} exact path="/AddReview/"/>
         <Route component={Education} exact path="/Education/"/>
         <Route component={Contact} exact path ="/Contact/"/>
-        <Route component={EditReview} exact path="/EditReview/"/>
+        <Route component={EditReview} exact path="/EditReview/:review_id" />
         
         <Route render={ () => {
             return <h1>404 Page Not Found. </h1>

@@ -45,7 +45,7 @@ render() {
         <h3>Brand: {myReview.brand}</h3>
         <h3>Product: {myReview.product}</h3>
         <h3>Content: {myReview.content}</h3>
-    <Link to="/EditReview/rs"><button>Edit</button></Link>
+    <Link to={`/EditReview/${myReview.review_id}`}><button>Edit</button></Link>
     <button onClick={() => {deleteReview(myReview.review_id)}}>Delete</button>
     
 

@@ -16,9 +16,8 @@ class EditReview extends Component {
             content: ""
         }
     }
-
-    componentDidMount(){
-
+    componentDidMount() {
+    
     }
 
     handleChange = e => {
@@ -43,11 +42,12 @@ render() {
     return (
         <div>
             <h1> Edit This Review</h1>
-            <input name="category_name" placeholder="Category" value={this.state.category_name} />
-            <input name="brand" placeholder="Brand" value={this.state.brand} onChange={this.handleChange}/>
-            <input name="product" placeholder="Product" value={this.state.product}/>
-            <input name="content" placeholder="Content" value={this.state.content}/>
-            <button onClick={this.handleEditReview}>Edit</button>
+    <h1>{this.props.match.params.review_id}</h1>
+            <input name="category_name" placeholder="Category" onChange ={this.handleChange} />
+            <input name="brand" placeholder="Brand" onChange ={this.handleChange} />
+            <input name="product" placeholder="Product" onChange ={this.handleChange}/>
+            <input name="content" placeholder="Content"  onChange ={this.handleChange}/>
+            <button onClick={() => (this.handleEditReview(this.props.match.params.review_id))}>Save Changes</button>
             
         </div>
     )

@@ -30,15 +30,17 @@ async function deleteReview(req, res) {
   }
 
   async function editReview(req, res) {
-    const { brand, product, content } = req.body;
+    const { category_name, brand, product, content } = req.body;
     const review_id = +req.params.review_id;
     const user_id = req.session.user.user_id;
     console.log(user_id);
     console.log(typeof user_id)
+    console.log(req.body);
   
     const db = req.app.get("db");
   
     const editedReview = await db.reviews.editReview([
+      category_name,
       brand,
       product,
       content,
