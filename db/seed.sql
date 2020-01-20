@@ -3,17 +3,17 @@ CREATE table users (
 user_id SERIAL PRIMARY KEY,
 username VARCHAR(40) NOT NULL,
 hash TEXT,
-first_name VARCHAR
+first_name VARCHAR 
 )
 
 --create reviews table
 CREATE table reviews (
     review_id SERIAL PRIMARY KEY,
-    category_name VARCHAR(40),
-    brand VARCHAR(200),
-    content VARCHAR(1000),
+    category_name VARCHAR(40) NOT NULL,
+    brand VARCHAR(200) NOT NULL,
+    content VARCHAR(1000) NOT NULL,
     user_id INT REFERENCES users(user_id)
-    product VARCHAR
+    product VARCHAR NOT NULL
 )
 
 -- checkForUsername

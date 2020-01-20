@@ -59,7 +59,8 @@ async function registerUser(req, res) {
             } else {
                 req.session.user = {
                     user_id: foundUser[0].user_id,
-                    username: foundUser[0].username
+                    username: foundUser[0].username,
+                    first_name: foundUser[0].first_name
                 }
             }
             console.log(req.session.user);

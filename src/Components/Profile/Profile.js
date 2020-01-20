@@ -1,25 +1,25 @@
 import React, { Component } from 'react';
 import AddReview from "../AddReview/AddReview"
-import {userReviews} from "../../redux/reducers/reviewsReducer";
-import {connect } from 'react-redux';
+import { userReviews } from "../../redux/reducers/reviewsReducer";
+import { connect } from 'react-redux';
 import { deleteReview } from '../../redux/reducers/reviewsReducer'
-import {logoutUser} from "../../redux/reducers/authReducer"
-import {Link} from "react-router-dom";
+import { logoutUser, getSession } from "../../redux/reducers/authReducer"
+import { Link } from "react-router-dom";
 
 class Profile extends Component {
-    constructor () {
+    constructor() {
         super();
         this.state = {
-        } 
+        }
     }
 
-    componentDidMount(){
+    componentDidMount() {
         console.log("mounted");
         this.props.userReviews();
-        
+        this.props.getSession();
     }
 
-    componentDidUpdate(prevProps){
+    componentDidUpdate(prevProps) {
         //think of this as a listener that changes when myReviews updates
         // console.log(this.props.myReviews.length)
         // if(prevProps.myReviews.length !== this.props.myReviews.length){
@@ -27,50 +27,50 @@ class Profile extends Component {
         // }
     }
 
-handleLogout = () => {
-    console.log("hit")
-    const {logoutUser} = this.props;
-    logoutUser();
-    
-}
+    handleLogout = () => {
 
-render() {
+        const { logoutUser } = this.props;
+        logoutUser();
+    }
 
-    console.log(this.props.myReviews, this.props.reviews)
-    const { myReviews, deleteReview } = this.props;
-    const myReviewsMapped = myReviews.map((myReview, i) =>{
+    render() {
+        const { first_name } = this.props;
+        console.log(this.props.myReviews, this.props.reviews)
+        const { myReviews, deleteReview } = this.props;
+        const myReviewsMapped = myReviews.map((myReview, i) => {
+            return (
+                <div key={i}>
+                    <h3>Category: {myReview.category_name}</h3>
+                    <h3>Brand: {myReview.brand}</h3>
+                    <h3>Product: {myReview.product}</h3>
+                    <h3>Content: {myReview.content}</h3>
+                    <Link to={`/EditReview/${myReview.review_id}`}><button>Edit</button></Link>
+                    <button onClick={() => { deleteReview(myReview.review_id) }}>Delete</button>
+                </div>
+            )
+        })
+
         return (
-            <div key={i}>
-    <h3>Category: {myReview.category_name}</h3>
-        <h3>Brand: {myReview.brand}</h3>
-        <h3>Product: {myReview.product}</h3>
-        <h3>Content: {myReview.content}</h3>
-    <Link to={`/EditReview/${myReview.review_id}`}><button>Edit</button></Link>
-    <button onClick={() => {deleteReview(myReview.review_id)}}>Delete</button>
-    
+            <div>
+
+                <h1>Hi, {first_name} </h1>
+                <AddReview />
+                {myReviewsMapped}
+                <Link to='/'><button onClick={this.handleLogout}>Logout</button></Link>
 
             </div>
-        )
-    })
-        return (
-        <div>
-            
-            <h1>Welcome to your Profile! Where you can see all your reviews and add a review.</h1>
-            <AddReview />   
-            {myReviewsMapped}
-            <Link to='/'><button onClick={this.handleLogout}>Logout</button></Link>
 
-        </div>
-        
-    )
-}
+        )
+    }
 }
 
 const mapStateToProps = reduxState => {
     return {
-      myReviews: reduxState.reviewsReducer.myReviews,
-      reviews: reduxState.reviewsReducer.reviews
-    }
-  }
+        myReviews: reduxState.reviewsReducer.myReviews,
+        reviews: reduxState.reviewsReducer.reviews,
+        first_name: reduxState.authReducer.first_name
 
-export default connect(mapStateToProps, {deleteReview, userReviews, logoutUser})(Profile);
+    }
+}
+
+export default connect(mapStateToProps, { deleteReview, userReviews, logoutUser, getSession })(Profile);

@@ -32,7 +32,7 @@ render() {
 
     return (
         <div>
-            <h1> Please Login </h1>
+            <h1> Welcome Back </h1>
             <input name="username" placeholder="Username" value={this.state.username} onChange={this.handleChange} />
         <input name="password" type="password" placeholder="Password" value={this.state.password} onChange={this.handleChange} />
         <button onClick={this.handleLogin}>Login</button>

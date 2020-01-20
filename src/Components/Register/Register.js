@@ -29,7 +29,7 @@ class Register extends Component {
 render() {
     return (
         <div>
-            <h1> Please Register </h1>
+            <h1> First time? Please Register </h1>
 
             <input name="first_name" placeholder="first name" value={this.state.first_name} onChange={this.handleChange}/>
             <input name="username" placeholder="username" value={this.state.username} onChange={this.handleChange}/>

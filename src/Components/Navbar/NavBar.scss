@@ -1,12 +1,14 @@
-/* header {
-    background-color: gray;
+header {
+    background-color:lightblue;
     display: flex;
     justify-content: space-around;
     height: 80px;
+    width: 100vw;
 }
 
 #logo{
-    color: yellow;
+    color: Black;
+    font-family: 'Roboto Condensed', sans-serif;
 }
 
 
@@ -96,4 +98,4 @@ img:hover {
         display: none;
     }
 }
-now when we go to less than 700px, the menu image displays instead of the list  */
+/* now when we go to less than 700px, the menu image displays instead of the list  */

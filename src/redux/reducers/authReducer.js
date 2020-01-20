@@ -4,6 +4,7 @@ const initialState = {
   user_id: null,
   username: "",
   password: "",
+  first_name: "",
   loading: false
 }
 
@@ -46,17 +47,20 @@ export default function reducer(state = initialState, action) {
   const { type, payload } = action;
 
   switch (type) {
-    case `${GET_SESSION}_PENDING`: {
-      return {
-        ...state,
-        loading: true
-      }
-    }
+    // case `${GET_SESSION}_PENDING`: {
+    //   return {
+    //     ...state,
+    //     loading: true
+    //   }
+    // }
     case `${GET_SESSION}_FULFILLED`: {
+
+    console.log(payload.data)
       return {
         ...state,
         user_id: payload.data.user_id,
         username: payload.data.username,
+        first_name: payload.data.first_name,
         loading: false
       }
     }

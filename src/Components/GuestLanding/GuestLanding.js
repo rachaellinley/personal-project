@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import "./GuestLanding.scss";
 import Login from "../Login/Login";
 import Register from "../Register/Register";
 
@@ -17,8 +17,10 @@ class GuestLanding extends Component {
 
 render() {
     return (
-        <div>
-            <h1> this is my tagline </h1>
+        <div id="main-div">
+            
+
+            <h1> The Product Curator  </h1>
             <Login />
             <Register />
           
