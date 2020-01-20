@@ -44,7 +44,7 @@ class Contact extends Component {
            
                     <input name="name" placeholder="name" type="text"  onChange={this.handleInput}/>
                     <input name="email" placeholder="email" type="email"  onChange={this.handleInput} />                    
-                    <input name="message" placeholder="message"  onChange={this.handleInput}/>
+                    <input name="message" placeholder="message" onChange={this.handleInput}/>
                 <button onClick={this.handleSubmit}>Submit</button>
                 </div>
 
