@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {Link} from "react-router-dom";
 import { connect } from 'react-redux';
 import {registerUser } from "../../redux/reducers/authReducer";
+import "./Register.scss";
 
 
 class Register extends Component {
@@ -36,7 +37,7 @@ render() {
             <input name="password" placeholder="password" value= {this.state.password} onChange={this.handleChange}/>
             
             <Link to="/profile/:user_id"><button onClick={this.handleRegister}>Register</button></Link>
-            <Link to='/AllReviews'><h1>Continue as Guest</h1></Link>
+            <Link to='/AllReviews' id="guest"><h1>Continue as Guest</h1></Link>
         </div>
     )
 }

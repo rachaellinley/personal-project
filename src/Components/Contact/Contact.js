@@ -42,10 +42,30 @@ class Contact extends Component {
             <div>
                 <h3>Send us a message</h3>
            
-                    <input name="name" placeholder="name" type="text"  onChange={this.handleInput}/>
-                    <input name="email" placeholder="email" type="email"  onChange={this.handleInput} />                    
-                    <input name="message" placeholder="message" onChange={this.handleInput}/>
-                <button onClick={this.handleSubmit}>Submit</button>
+                    <input 
+                    name="name" 
+                    placeholder="name" 
+                    type="text"  
+                    onChange={this.handleInput}
+                    />
+
+                    <input 
+                    name="email" 
+                    placeholder="email" 
+                    type="email"  
+                    onChange={this.handleInput} 
+                    />                    
+                    
+                    <input 
+                    name="message" 
+                    placeholder="message" 
+                    onChange={this.handleInput} 
+                    />
+
+                <button
+                 onClick={this.handleSubmit}>
+                     Submit
+                     </button>
                 </div>
 
         )

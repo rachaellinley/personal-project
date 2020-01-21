@@ -35,7 +35,20 @@ render() {
     return (
         <div>
             <h1> Add a Product Review </h1>
-            <input name="category_name" placeholder="Category" value={this.state.category_name} onChange={this.handleChange}/>
+
+            <select name="category_name" placeholder="Category" onChange={this.handleChange} value={this.state.category_name}>
+                
+                <option value="Cleanser"> Cleanser </option>
+                <option value= "Toner"> Toner </option>
+                <option value="Moisturizer"> Moisturizer </option>
+                <option value="Scrub"> Scrub </option>
+                <option value="Treatment"> Treatment </option>
+                <option value="Serum"> Serum </option>
+                <option value="Lip"> Lip Treatment </option>
+                <option value="Shampoo"> Shampoo </option>
+                <option value="Conditioner"> Conditioner </option>
+                </select>
+
             <input name="brand" placeholder="Brand" value={this.state.brand} onChange={this.handleChange}/>
             <input name="product" placeholder="Product" value={this.state.product} onChange={this.handleChange}/>
             <input name="content" placeholder="Content" value={this.state.content} onChange={this.handleChange}/>
