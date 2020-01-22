@@ -1,5 +1,4 @@
 import React from 'react';
-// import "./NavBar.css";
 import "./NavBar.scss";
 import {Link } from "react-router-dom"; 
 
@@ -35,14 +34,16 @@ export default class NavBar extends React.Component {
 
     render(){
     return (
+        <div>
+            
         <header>
             <h2 id="logo"> skinAdvisor </h2>
+            
             <ul id='site-nav'>
                 <Link to= "/AllReviews/" className="link"><li className='menu-text'>All Reviews</li></Link>
                 <Link to="/Education/" className="link"><li className='menu-text'>Learn</li></Link>
                 <Link to="/profile/:user_id" className="link"><li className='menu-text'>Profile</li></Link>
                 <Link to="/Contact/" className="link"><li className='menu-text'>Contact</li></Link>
-                <Link to="/FeaturedProdcut/" className="link"><li className='menu-text'>Featured Product</li></Link>
                 <Link to="/" className="link"><li className='menu-text'>Login</li></Link>
                 
                 
@@ -62,7 +63,8 @@ export default class NavBar extends React.Component {
                    
                 </ul>
             </ul>
-        </header> 
+            </header>
+        </div>
     )
     }
 }

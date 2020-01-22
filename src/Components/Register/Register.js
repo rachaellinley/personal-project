@@ -3,6 +3,7 @@ import {Link} from "react-router-dom";
 import { connect } from 'react-redux';
 import {registerUser } from "../../redux/reducers/authReducer";
 import "./Register.scss";
+import {Redirect} from "react-router-dom";
 
 
 class Register extends Component {
@@ -28,6 +29,12 @@ class Register extends Component {
 
 
 render() {
+    if(this.props.user_id){
+        return(
+            <Redirect to={`/profile/${this.props.user_id}`} />
+        )
+    }
+   
     return (
         <div>
             <h1> First time? Please Register </h1>
@@ -35,8 +42,8 @@ render() {
             <input name="first_name" placeholder="first name" value={this.state.first_name} onChange={this.handleChange}/>
             <input name="username" placeholder="username" value={this.state.username} onChange={this.handleChange}/>
             <input name="password" placeholder="password" value= {this.state.password} onChange={this.handleChange}/>
-            
-            <Link to="/profile/:user_id"><button onClick={this.handleRegister}>Register</button></Link>
+            <button onClick={this.handleRegister}>Register</button>
+            {/* <Link to="/profile/:user_id"><button onClick={this.handleRegister}>Register</button></Link> */}
             <Link to='/AllReviews' id="guest"><h1>Continue as Guest</h1></Link>
         </div>
     )

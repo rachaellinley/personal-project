@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,MAAM,CAAC;EACH,eAAe,EAAE,IAAI;CACxB",
+    "sources": [
+        "Register.scss"
+    ],
+    "names": [],
+    "file": "Register.css"
+}

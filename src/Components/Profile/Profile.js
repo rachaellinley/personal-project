@@ -14,9 +14,9 @@ class Profile extends Component {
     }
 
     componentDidMount() {
-        console.log("mounted");
-        this.props.userReviews();
         this.props.getSession();
+        this.props.userReviews();
+        console.log("mounted");
     }
 
     componentDidUpdate(prevProps) {

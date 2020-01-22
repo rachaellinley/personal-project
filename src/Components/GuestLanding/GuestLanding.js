@@ -20,7 +20,7 @@ render() {
         <div id="main-div">
             
 
-            <h1> The Product Curator  </h1>
+            <h2> The Product Curator  </h2>
             <Login />
             <Register />
           

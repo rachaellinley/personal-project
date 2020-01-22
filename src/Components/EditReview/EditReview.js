@@ -43,7 +43,20 @@ render() {
         <div>
             <h1> Edit This Review</h1>
     <h1>{this.props.match.params.review_id}</h1>
-            <input name="category_name" placeholder="Category" onChange ={this.handleChange} />
+
+    <select name="category_name" placeholder="Category" onChange={this.handleChange} value={this.state.category_name}>
+                
+                <option value="Cleanser"> Cleanser </option>
+                <option value= "Toner"> Toner </option>
+                <option value="Moisturizer"> Moisturizer </option>
+                <option value="Scrub"> Scrub </option>
+                <option value="Treatment"> Treatment </option>
+                <option value="Serum"> Serum </option>
+                <option value="Lip"> Lip Treatment </option>
+                <option value="Shampoo"> Shampoo </option>
+                <option value="Conditioner"> Conditioner </option>
+                </select>
+            {/* <input name="category_name" placeholder="Category" onChange ={this.handleChange} /> */}
             <input name="brand" placeholder="Brand" onChange ={this.handleChange} />
             <input name="product" placeholder="Product" onChange ={this.handleChange}/>
             <input name="content" placeholder="Content"  onChange ={this.handleChange}/>

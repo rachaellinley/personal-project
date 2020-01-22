@@ -89,7 +89,8 @@ export default function reducer(state = initialState, action) {
       case `${USER_REVIEWS}_FULFILLED`: {
         return {
           ...state,
-          myReviews: payload.data
+          myReviews: payload.data,
+          loading: false
         }
     }
 
