@@ -1,12 +1,15 @@
 header {
-  background-color: lightblue;
+  background-color: gray;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  height: 80px;
+  height: 70px;
   width: 100vw;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .link {
@@ -14,8 +17,8 @@ header {
 }
 
 #logo {
-  color: Black;
-  font-family: 'Roboto Condensed', sans-serif;
+  color: white;
+  font-family: 100% "Roboto Condensed", sans-serif;
 }
 
 .drop-down-menu, .drop-down-menu-open, .drop-down-menu-closed {
@@ -25,13 +28,12 @@ header {
   right: 0px;
   text-decoration: none;
   top: 80px;
-  background: black;
+  background: grey;
   -webkit-box-align: right;
       -ms-flex-align: right;
           align-items: right;
   padding: 0px;
   margin: 0px;
-  /* z-index: 2; */
 }
 
 .drop-down-menu-open {
@@ -67,7 +69,6 @@ header {
 }
 
 @-webkit-keyframes closeMenu {
-  /*target points in time in animation */
   0% {
     top: 80px;
   }
@@ -77,7 +78,6 @@ header {
 }
 
 @keyframes closeMenu {
-  /*target points in time in animation */
   0% {
     top: 80px;
   }
@@ -92,22 +92,18 @@ header {
   display: flex;
 }
 
-/*transition is like an animation; allows us to animate something but transition doesn't handle
-starting or ending values 
-they don't change css properties, but define how the change occurs; 
-must be triggered to run by an action- click/hover/etc */
 #site-nav li {
   list-style: none;
   margin-left: 10px;
   font-size: 25px;
   color: #fff;
-  font-family: 'Roboto Condensed', sans-serif;
   text-decoration: none;
 }
 
 img {
-  width: 50px;
+  width: 40px;
   display: none;
+  margin-top: 15px;
 }
 
 img:hover {
@@ -125,6 +121,4 @@ img:hover {
     display: none;
   }
 }
-
-/* now when we go to less than 700px, the menu image displays instead of the list  */
 /*# sourceMappingURL=NavBar.css.map */

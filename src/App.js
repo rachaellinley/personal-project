@@ -1,7 +1,7 @@
 import React from 'react';
-// import './App.css';
+import './App.css';
 
-import './App.scss';
+// import './App.scss';
 import NavBar from "./Components/Navbar/NavBar";
 import routes from "./routes"
 

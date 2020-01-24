@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAIA,AAAA,KAAK,CAAC;EACF,MAAM,EAAE,eAAe;CAG1B",
+    "sources": [
+        "AllReviews.scss"
+    ],
+    "names": [],
+    "file": "AllReviews.css"
+}

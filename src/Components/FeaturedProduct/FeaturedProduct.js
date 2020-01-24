@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import "./FeaturedProduct.scss"
+import "./FeaturedProduct.css"
 
 
 class FeaturedProduct extends Component {

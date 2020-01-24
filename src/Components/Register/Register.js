@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {Link} from "react-router-dom";
 import { connect } from 'react-redux';
 import {registerUser } from "../../redux/reducers/authReducer";
-import "./Register.scss";
+import "./Register.css";
 import {Redirect} from "react-router-dom";
 
 

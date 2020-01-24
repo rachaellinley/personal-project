@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "AAAA,AAAA,EAAE,CAAC;EACC,WAAW,EAAE,iCAAiC;CACjD",
+    "mappings": "AAEA,AAAA,oBAAoB,CAAC;EACjB,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,MAAM;CACzB",
     "sources": [
         "GuestLanding.scss"
     ],

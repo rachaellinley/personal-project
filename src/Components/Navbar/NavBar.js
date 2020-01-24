@@ -1,5 +1,5 @@
 import React from 'react';
-import "./NavBar.scss";
+import "./NavBar.css";
 import {Link } from "react-router-dom"; 
 
 export default class NavBar extends React.Component {
@@ -42,8 +42,9 @@ export default class NavBar extends React.Component {
             <ul id='site-nav'>
                 <Link to= "/AllReviews/" className="link"><li className='menu-text'>All Reviews</li></Link>
                 <Link to="/Education/" className="link"><li className='menu-text'>Learn</li></Link>
-                <Link to="/profile/:user_id" className="link"><li className='menu-text'>Profile</li></Link>
                 <Link to="/Contact/" className="link"><li className='menu-text'>Contact</li></Link>
+                <Link to="/profile/:user_id" className="link"><li className='menu-text'>Profile</li></Link>
+                
                 <Link to="/" className="link"><li className='menu-text'>Login</li></Link>
                 
                 
@@ -55,11 +56,11 @@ export default class NavBar extends React.Component {
                     {/* </div> */}
                 </li>
                 <ul className={this.state.menuStatus}>
-                    <Link to="/AllReviews/" onClick={this.handleLinkClick}><li>All Reviews</li></Link>
-                    <Link to="/Education/" onClick={this.handleLinkClick}><li>Learn</li></Link>
-                    <Link to="/profile/:user_id" onClick={this.handleLinkClick}><li>Profile</li></Link>
-                    <Link to="/Contact/" onClick={this.handleLinkClick}><li>Contact</li></Link>
-                    <Link to="/" onClick={this.handleLinkClick}><li>Login</li></Link>
+                    <Link to="/AllReviews/" className="link" onClick={this.handleLinkClick}><li>All Reviews</li></Link>
+                    <Link to="/Education/" className="link" onClick={this.handleLinkClick}><li>Learn</li></Link>
+                    <Link to="/profile/:user_id" className="link" onClick={this.handleLinkClick}><li>Profile</li></Link>
+                    <Link to="/Contact/" className="link" onClick={this.handleLinkClick}><li>Contact</li></Link>
+                    <Link to="/" className="link" onClick={this.handleLinkClick}><li>Login</li></Link>
                    
                 </ul>
             </ul>

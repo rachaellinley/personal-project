@@ -52,7 +52,7 @@ async function deleteReview(req, res) {
   }
 
 async function userReviews (req, res){
-  console.log("hit");
+
   if(req.session.user) {
     const userReviews = await req.app.get('db').reviews.userReviews([req.session.user.user_id]);
     console.log(userReviews);

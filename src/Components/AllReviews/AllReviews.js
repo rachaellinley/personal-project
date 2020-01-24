@@ -52,14 +52,13 @@ render() {
         <h3>Brand:{review.brand}</h3> 
         <h3>Product: {review.product}</h3>
         <h3>Content:{review.content}</h3>
-       
-        
-
+       <br/>
         </div>)})
 
     return (
         <div>
             <h3>Search Reviews by Category</h3>
+
             <select placeholder="Search" name="filteredString" onChange={this.handleChange}>
             <option value="">Choose a Category</option>
             <option value="Cleanser">Cleanser</option>
@@ -72,12 +71,11 @@ render() {
             <option value="Shampoo">Shampoo</option>
             <option value="Conditioner">Conditioner</option>
             </select>
-            <button onClick={() => {
-                // this.handleClear()
-                this.handleSearch()
-            }}> Go </button>
+
+            <button onClick={() => {this.handleSearch()}}> Go </button>
             
-            
+            <br/>
+            <br/>
             <h1>All Reviews</h1>
             {reviewsMapped}
             

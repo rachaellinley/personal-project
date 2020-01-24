@@ -1,19 +1,27 @@
+$font-stack: 'Roboto Condensed', sans-serif;
+
 header {
-    background-color:lightblue;
+    background-color:gray;
     display: flex;
     justify-content: space-around;
-    height: 80px;
+    height: 70px;
     width: 100vw;
+    align-items: center;
+    
+    
 }
 
 .link {
     text-decoration: none;
+   
+   
 }
 
 #logo{
-    color: Black;
-    font-family: 'Roboto Condensed', sans-serif;
+    color:white;
+    font-family: 100% $font-stack;
 }
+
 
 
 .drop-down-menu, .drop-down-menu-open, .drop-down-menu-closed{
@@ -23,17 +31,19 @@ header {
     right: 0px;
     text-decoration: none;
     top: 80px;
-    background: black;  
+    background: grey;  
     align-items: right;
     padding: 0px;
     margin: 0px;
-    /* z-index: 2; */
+    
+
 }
 
 
 
 .drop-down-menu-open{
     animation: openMenu .5s forwards linear;
+    
 }
 
 .drop-down-menu-closed{
@@ -43,6 +53,8 @@ header {
 
 .drop-down-menu {
     display: none;
+    
+    
 }
 
 @keyframes openMenu{
@@ -57,7 +69,7 @@ header {
 
 
 @keyframes closeMenu{
-    /*target points in time in animation */
+
     0% {
         top: 80px;
     }
@@ -67,29 +79,26 @@ header {
 
 }
 
-#site-nav{
-    display: flex;
-    
-}
-/*transition is like an animation; allows us to animate something but transition doesn't handle
-starting or ending values 
-they don't change css properties, but define how the change occurs; 
-must be triggered to run by an action- click/hover/etc */
+#site-nav {
+    display:flex;
 
-#site-nav li{
-    list-style: none;
-    margin-left: 10px;
-    font-size: 25px;
-    color: #fff;
-    font-family: 'Roboto Condensed', sans-serif;
-    text-decoration: none;
+    li{
+        list-style: none;
+        margin-left: 10px;
+        font-size: 25px;
+        color: #fff;
+        text-decoration: none;
+    }
 }
 
 
 img {
-    width: 50px;
+    width: 40px;
     display: none;
+    margin-top: 15px;
+    
 }
+
 img:hover {
     width: 75px;
     height: 75px;
@@ -104,4 +113,3 @@ img:hover {
         display: none;
     }
 }
-/* now when we go to less than 700px, the menu image displays instead of the list  */

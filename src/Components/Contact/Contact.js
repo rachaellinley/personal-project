@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import "./Contact.scss"
+import "./Contact.css"
 import axios from 'axios';
 
 class Contact extends Component {
