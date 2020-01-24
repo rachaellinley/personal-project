@@ -1,11 +1,11 @@
 header {
-  background-color: gray;
+  background-color: #2d2a2a;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  height: 70px;
+  height: 65px;
   width: 100vw;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -18,7 +18,8 @@ header {
 
 #logo {
   color: white;
-  font-family: 100% "Roboto Condensed", sans-serif;
+  font-family: cursive;
+  font-size: larger;
 }
 
 .drop-down-menu, .drop-down-menu-open, .drop-down-menu-closed {
@@ -26,7 +27,6 @@ header {
   height: 20vh;
   position: fixed;
   right: 0px;
-  text-decoration: none;
   top: 80px;
   background: grey;
   -webkit-box-align: right;

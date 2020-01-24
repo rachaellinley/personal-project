@@ -39,9 +39,11 @@ class Contact extends Component {
 
     render() {
         return (
-            <div>
-                <h3>Send us a message</h3>
-           
+            <div id="contact-container">
+                <h3>Want to see your product featured? </h3>
+                <h3>Have a question?</h3>
+                    
+                <div>
                     <input 
                     name="name" 
                     placeholder="name" 
@@ -66,6 +68,7 @@ class Contact extends Component {
                  onClick={this.handleSubmit}>
                      Submit
                      </button>
+                     </div>
                 </div>
 
         )

@@ -1,16 +1,15 @@
 #main-container{
-   color: white;
+    margin: 35px;
     border: solid violet 2px;
-    // padding: 25px;
+    padding: 25px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: url("../images/mortar.jpg");
-    
+
 }
 
 
-#card {
+#review-container {
     border: solid black 2px;
     display: flex;
     width: 75%;

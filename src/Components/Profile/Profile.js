@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import { deleteReview } from '../../redux/reducers/reviewsReducer'
 import { logoutUser, getSession } from "../../redux/reducers/authReducer"
 import { Link } from "react-router-dom";
+import "./Profile.css"
 
 class Profile extends Component {
     constructor() {
@@ -39,7 +40,7 @@ class Profile extends Component {
         const { myReviews, deleteReview } = this.props;
         const myReviewsMapped = myReviews.map((myReview, i) => {
             return (
-                <div key={i}>
+                <div id="review-container" key={i}>
                     <h3>Category: {myReview.category_name}</h3>
                     <h3>Brand: {myReview.brand}</h3>
                     <h3>Product: {myReview.product}</h3>
@@ -51,12 +52,13 @@ class Profile extends Component {
         })
 
         return (
-            <div>
+            <div id="main-container">
 
-                <h1>Hi, {first_name} </h1>
+                <h1>Hi, {first_name} </h1><Link to='/'><button onClick={this.handleLogout}>Logout</button></Link>
+                
                 <AddReview />
                 {myReviewsMapped}
-                <Link to='/'><button onClick={this.handleLogout}>Logout</button></Link>
+                
 
             </div>
 

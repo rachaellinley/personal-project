@@ -56,7 +56,7 @@ render() {
         </div>)})
 
     return (
-        <div>
+        <div id="main-container">
             <h3>Search Reviews by Category</h3>
 
             <select placeholder="Search" name="filteredString" onChange={this.handleChange}>
@@ -74,8 +74,7 @@ render() {
 
             <button onClick={() => {this.handleSearch()}}> Go </button>
             
-            <br/>
-            <br/>
+           
             <h1>All Reviews</h1>
             {reviewsMapped}
             

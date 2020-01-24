@@ -1,10 +1,11 @@
-$font-stack: 'Roboto Condensed', sans-serif;
+$font-stack: 'Open Sans Condensed', sans-serif;
+
 
 header {
-    background-color:gray;
+    background-color:rgb(45, 42, 42);
     display: flex;
     justify-content: space-around;
-    height: 70px;
+    height: 65px;
     width: 100vw;
     align-items: center;
     
@@ -14,12 +15,13 @@ header {
 .link {
     text-decoration: none;
    
-   
 }
 
 #logo{
     color:white;
-    font-family: 100% $font-stack;
+    font-family: cursive;
+    font-size: larger; 
+    
 }
 
 
@@ -29,7 +31,6 @@ header {
     height: 20vh;
     position: fixed;
     right: 0px;
-    text-decoration: none;
     top: 80px;
     background: grey;  
     align-items: right;

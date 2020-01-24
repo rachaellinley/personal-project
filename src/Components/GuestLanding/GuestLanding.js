@@ -16,9 +16,9 @@ class GuestLanding extends Component {
 
 render() {
     return (
-        <div id="body">
-
-            <h2> The Product Curator  </h2>
+        <div className="background">
+            
+            <h2 id="tagline"> Your Product Curator  </h2>
             <div id="component-container">
             <Login />
             <Register />

@@ -1,1 +1,18 @@
-/* No CSS *//*# sourceMappingURL=Contact.css.map */
+#contact-container {
+  padding: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  background-image: url("../images/gazing out.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/*# sourceMappingURL=Contact.css.map */

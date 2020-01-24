@@ -1,6 +1,7 @@
 #main-container {
-  color: white;
+  margin: 35px;
   border: solid violet 2px;
+  padding: 25px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -11,10 +12,9 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: url("../images/mortar.jpg");
 }
 
-#card {
+#review-container {
   border: solid black 2px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -30,4 +30,4 @@
   padding: 10px;
   margin: 10px;
 }
-/*# sourceMappingURL=AllReviews.css.map */
+/*# sourceMappingURL=Profile.css.map */
