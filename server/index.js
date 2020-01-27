@@ -16,6 +16,7 @@ const { SERVER_PORT, SESSION_SECRET, CONNECTION_STRING, EMAIL, PASSWORD} = proce
 //middleware
 app.use(express.json());
 
+app.use( express.static( `${__dirname}/../build` ) );
 //nodemailer
 var transport = {
   host: 'smtp.gmail.com',
