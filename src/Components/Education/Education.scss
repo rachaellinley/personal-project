@@ -1,0 +1,32 @@
+#education-container{
+    padding: 75px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height:100%;
+    background-image: url("../images/makeup.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#question {
+    font-size: xx-large;
+    color: brown;
+}
+
+#spotlight {
+    font-size: x-large;
+}
+
+#vitamin-c {
+    font-size: x-large;
+}
+#ingredients-container {
+    width: 65%;
+    height: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 25px;
+    background-color: rgba(255, 255, 255, 0.845);
+}

@@ -2,7 +2,12 @@
   text-decoration: none;
 }
 
-h1 {
+#register {
+  color: black;
   font-family: "Roboto Condensed", sans-serif;
+}
+
+#guest {
+  color: black;
 }
 /*# sourceMappingURL=Register.css.map */

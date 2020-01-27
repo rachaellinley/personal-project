@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import {editReview} from "../../redux/reducers/reviewsReducer"
 import {getSession} from '../../redux/reducers/authReducer';
-
+import "./EditReview.css"
 
 
 
@@ -40,8 +40,8 @@ class EditReview extends Component {
 
 render() {
     return (
-        <div>
-            <h1> Edit This Review</h1>
+        <div id="edit-review-container">
+            <h1 id="edit-text"> Edit This Review</h1>
     <h1>{this.props.match.params.review_id}</h1>
 
     <select name="category_name" placeholder="Category" onChange={this.handleChange} value={this.state.category_name}>

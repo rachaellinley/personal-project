@@ -1,17 +1,20 @@
-#main-container{
-   color: white;
-    border: solid violet 2px;
-    // padding: 25px;
+#all-reviews-title {
+    font-size: x-large;
+}
+
+#all-reviews-container{
+    padding: 75px;
+    color: black;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: url("../images/mortar.jpg");
-    
+    height:100vh;
+ 
 }
-
 
 #card {
     border: solid black 2px;
+    background-color: rgba(255, 255, 255, 0.845);
     display: flex;
     width: 75%;
     flex-direction: column; 

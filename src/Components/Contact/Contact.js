@@ -40,35 +40,43 @@ class Contact extends Component {
     render() {
         return (
             <div id="contact-container">
-                <h3>Want to see your product featured? </h3>
-                <h3>Have a question?</h3>
-                    
-                <div>
-                    <input 
-                    name="name" 
-                    placeholder="name" 
+                <h3>Let's connect! </h3>
+                <br/>
+                <h3>We'd love to hear from you.</h3>
+                <br/>
+
+            
+                 <span>Name:              
+                
+                    <input className="contact-inputs"
+                    name="name"  
                     type="text"  
                     onChange={this.handleInput}
-                    />
+                    /></span>
 
-                    <input 
-                    name="email" 
-                    placeholder="email" 
+                    <br/>
+                <span>Email:
+                    <input className="contact-inputs"
+                    name="email"  
                     type="email"  
                     onChange={this.handleInput} 
-                    />                    
-                    
-                    <input 
+                    />  </span>   
+                    <br/>   
+
+                    <span>Message:
+                    <input className="contact-inputs" id="message-input"
                     name="message" 
-                    placeholder="message" 
                     onChange={this.handleInput} 
                     />
+                    </span>
+
+                    <br/>
 
                 <button
                  onClick={this.handleSubmit}>
                      Submit
                      </button>
-                     </div>
+                     
                 </div>
 
         )

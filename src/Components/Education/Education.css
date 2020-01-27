@@ -1,1 +1,48 @@
-/* No CSS *//*# sourceMappingURL=Education.css.map */
+#education-container {
+  padding: 75px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  background-image: url("../images/makeup.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#question {
+  font-size: xx-large;
+  color: brown;
+}
+
+#spotlight {
+  font-size: x-large;
+}
+
+#vitamin-c {
+  font-size: x-large;
+}
+
+#ingredients-container {
+  width: 65%;
+  height: 45%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin: 25px;
+  background-color: rgba(255, 255, 255, 0.845);
+}
+/*# sourceMappingURL=Education.css.map */

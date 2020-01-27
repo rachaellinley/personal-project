@@ -1,13 +1,19 @@
 #contact-container{
-    
-    
-    padding: 150px;
+    padding: 75px;
     display: flex;
+    color: white;
     flex-direction: column;
     align-items: center;
     height:100%;
-    background-image: url("../images/gazing out.jpg");
-    background-repeat: no-repeat;
+    background-image: url("../images/product.jpg");
+    background-repeat: repeat-y;
     background-size: cover;
-  
+}
+
+.contact-inputs{
+    width: 100%;
+}
+
+#message-input {
+    height: 150px;
 }

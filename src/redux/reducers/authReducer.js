@@ -47,13 +47,13 @@ export default function reducer(state = initialState, action) {
   const { type, payload } = action;
 
   switch (type) {
-    case `${GET_SESSION}_PENDING`: {
-      console.log("pending")
-      return {
-        ...state,
-        loading: true
-      }
-    }
+    // case `${GET_SESSION}_PENDING`: {
+    //   console.log("pending")
+    //   return {
+    //     ...state,
+    //     loading: true
+    //   }
+    // }
     case `${GET_SESSION}_FULFILLED`: {
     console.log("fulfilled")
       return {
@@ -64,12 +64,12 @@ export default function reducer(state = initialState, action) {
         loading: false
       }
     }
-    case `${REGISTER_USER}_PENDING`: {
-      return {
-        ...state,
-        loading: true
-      }
-    }
+    // case `${REGISTER_USER}_PENDING`: {
+    //   return {
+    //     ...state,
+    //     loading: true
+    //   }
+    // }
     case `${REGISTER_USER}_FULFILLED`: {
       return {
         ...state,
@@ -78,12 +78,12 @@ export default function reducer(state = initialState, action) {
         loading: false
       }
     }
-    case `${LOGIN_USER}_PENDING`: {
-      return {
-        ...state,
-        loading: true
-      }
-    }
+    // case `${LOGIN_USER}_PENDING`: {
+    //   return {
+    //     ...state,
+    //     loading: true
+    //   }
+    // }
     case `${LOGIN_USER}_FULFILLED`: {
       return {
         ...state,

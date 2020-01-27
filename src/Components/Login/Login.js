@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import {loginUser} from "../../redux/reducers/authReducer";
 import {Redirect} from "react-router-dom";
+import "./Login.css"
 
 class Login extends Component {
     constructor () {
@@ -32,9 +33,9 @@ render() {
 
     return (
         <div>
-            <h1> Welcome Back </h1>
-            <input name="username" placeholder="Username" value={this.state.username} onChange={this.handleChange} />
-        <input name="password" type="password" placeholder="Password" value={this.state.password} onChange={this.handleChange} />
+            <h1 id="welcome"> Welcome Back </h1>
+            <input name="username" placeholder="username" value={this.state.username} onChange={this.handleChange} />
+        <input name="password" type="password" placeholder="password" value={this.state.password} onChange={this.handleChange} />
         <button onClick={this.handleLogin}>Login</button>
         </div>
     )

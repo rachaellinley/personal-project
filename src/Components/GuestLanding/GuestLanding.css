@@ -1,17 +1,30 @@
 .background {
   height: 100%;
-  background-image: url("../images/mortar.jpg");
+  background-image: url(../images/makeup.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #tagline {
-  color: white;
-  padding: 45px;
+  color: brown;
+  font-size: xx-large;
+  padding: 70px;
 }
 
 #component-container {
+  background-color: rgba(255, 255, 255, 0.845);
   height: 20%;
+  width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

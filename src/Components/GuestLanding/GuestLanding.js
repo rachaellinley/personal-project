@@ -20,7 +20,10 @@ render() {
             
             <h2 id="tagline"> Your Product Curator  </h2>
             <div id="component-container">
+                
             <Login />
+            <br/>
+            <br/>
             <Register />
             </div>
           

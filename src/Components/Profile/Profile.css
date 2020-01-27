@@ -1,7 +1,6 @@
-#main-container {
-  margin: 35px;
-  border: solid violet 2px;
-  padding: 25px;
+#profile-container {
+  height: 100%;
+  width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -12,6 +11,15 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-image: url(../images/makeup.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#greeting {
+  margin-top: 75px;
+  font-weight: bold;
+  font-size: xx-large;
 }
 
 #review-container {
@@ -19,7 +27,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 75%;
+  width: 65%;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -29,5 +37,6 @@
           align-items: flex-start;
   padding: 10px;
   margin: 10px;
+  background-color: rgba(255, 255, 255, 0.845);
 }
 /*# sourceMappingURL=Profile.css.map */

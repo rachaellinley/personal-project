@@ -4,6 +4,11 @@ $font-stack: 'Roboto Condensed', sans-serif;
     text-decoration: none;
 }
 
-h1 {
+#register {
+    color:black;
     font-family: $font-stack;
+}
+
+#guest {
+    color: black;
 }

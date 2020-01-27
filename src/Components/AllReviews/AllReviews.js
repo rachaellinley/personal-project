@@ -49,14 +49,16 @@ render() {
         return (
         <div id="card" key={i}>
         <h3>Category: {review.category_name}</h3>
-        <h3>Brand:{review.brand}</h3> 
+        <h3>Brand: {review.brand}</h3> 
         <h3>Product: {review.product}</h3>
-        <h3>Content:{review.content}</h3>
+        <h3>Content: {review.content}</h3>
        <br/>
         </div>)})
 
     return (
-        <div id="main-container">
+        <div id="all-reviews-container">
+          <h1 id="all-reviews-title">All Reviews</h1>
+          <br/>
             <h3>Search Reviews by Category</h3>
 
             <select placeholder="Search" name="filteredString" onChange={this.handleChange}>
@@ -75,7 +77,7 @@ render() {
             <button onClick={() => {this.handleSearch()}}> Go </button>
             
            
-            <h1>All Reviews</h1>
+            
             {reviewsMapped}
             
         </div>           

@@ -37,12 +37,14 @@ render() {
    
     return (
         <div>
-            <h1> First time? Please Register </h1>
+            <h1 id="register"> First time? Please Register </h1>
 
             <input name="first_name" placeholder="first name" value={this.state.first_name} onChange={this.handleChange}/>
             <input name="username" placeholder="username" value={this.state.username} onChange={this.handleChange}/>
             <input name="password" placeholder="password" value= {this.state.password} onChange={this.handleChange}/>
             <button onClick={this.handleRegister}>Register</button>
+            <br/>
+            <br/>
             {/* <Link to="/profile/:user_id"><button onClick={this.handleRegister}>Register</button></Link> */}
             <Link to='/AllReviews' id="guest"><h1>Continue as Guest</h1></Link>
         </div>

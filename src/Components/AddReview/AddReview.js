@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import {addReview} from '../../redux/reducers/reviewsReducer';
 import {getSession} from '../../redux/reducers/authReducer';
 import { withRouter} from "react-router-dom";
+import "./AddReview.css"
 
 
 
@@ -34,7 +35,7 @@ class AddReview extends Component {
 render() {
     return (
         <div>
-            <h1> Add a Product Review </h1>
+            <h1 id="add-review"> Add a Product Review </h1>
 
             <select name="category_name" placeholder="Category" onChange={this.handleChange} value={this.state.category_name}>
                 
@@ -51,7 +52,9 @@ render() {
 
             <input name="brand" placeholder="Brand" value={this.state.brand} onChange={this.handleChange}/>
             <input name="product" placeholder="Product" value={this.state.product} onChange={this.handleChange}/>
-            <input name="content" placeholder="Content" value={this.state.content} onChange={this.handleChange}/>
+           <div>
+            <input id="review-input" name="content" value={this.state.content} onChange={this.handleChange}/>
+            </div>
             <button onClick={this.handleAddReview}>Add</button>
             
         </div>

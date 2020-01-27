@@ -16,9 +16,21 @@ header {
   text-decoration: none;
 }
 
+#site-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#site-nav li {
+  list-style: none;
+  margin-left: 10px;
+  font-size: 25px;
+  color: white;
+}
+
 #logo {
   color: white;
-  font-family: cursive;
   font-size: larger;
 }
 
@@ -84,20 +96,6 @@ header {
   100% {
     top: -1000px;
   }
-}
-
-#site-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-#site-nav li {
-  list-style: none;
-  margin-left: 10px;
-  font-size: 25px;
-  color: #fff;
-  text-decoration: none;
 }
 
 img {

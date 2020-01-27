@@ -52,11 +52,15 @@ class Profile extends Component {
         })
 
         return (
-            <div id="main-container">
+            <div id="profile-container">
+                
+              <h2 id="greeting">Hi, {first_name} </h2>
 
-                <h1>Hi, {first_name} </h1><Link to='/'><button onClick={this.handleLogout}>Logout</button></Link>
+                <Link to='/'><button onClick={this.handleLogout}>Logout</button></Link>
+               
                 
                 <AddReview />
+
                 {myReviewsMapped}
                 
 
