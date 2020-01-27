@@ -4,6 +4,7 @@ const massive = require("massive");
 const session = require("express-session");
 const app = express();
 const nodemailer = require("nodemailer");
+const path = require ('path');
 
 //controllers
 const ac = require("./controllers/authController");
@@ -96,6 +97,11 @@ app.get("/api/reviews", allReviews);
 app.delete("/api/reviews/:review_id", deleteReview)
 app.put("/api/reviews/:review_id", editReview)
 app.get("/api/reviews/profile", userReviews)
+
+//point your server to your front end static files 
+app.get('*', (req, res)=>{
+  res.sendFile(path.join(__dirname, '../build/index.html'));
+});
 
 
 app.listen(SERVER_PORT, () => {
