@@ -20,6 +20,7 @@ time, mark, audio, video {
 	padding: 0;
 	border: 0;
 	font-size: 100%;
+	
 	font: inherit;
 	vertical-align: baseline;
 }
@@ -30,7 +31,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
   line-height: 1;
-  background-color: rgb(216, 212, 212)
+  background-color:  rgb(242, 231, 231);
   
 
 }

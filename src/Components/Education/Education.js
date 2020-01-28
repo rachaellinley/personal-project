@@ -39,12 +39,12 @@ class Education extends Component {
 
                     <br/>
 
-                    <h1 id="vitamin-c"> When should I use it?</h1>
+                    <h1 id="vitamin-c"> When to Use:</h1>
                     <h3>
-                    Immediately after cleanser.</h3>
+                    Immediately after cleanser, morning or night.</h3>
                     <br/>
 
-                    <h1 id="vitamin-c"> Where do I find it?</h1>
+                    <h1 id="vitamin-c"> What to Look For:</h1>
                     <h3>
                         The most beneficial form of vitamin C is Ascorbic Acid AKA L-ascorbic acid. 
                         Other forms: sodium ascorbyl phosphate, ascorbyl palmitate, retinyl ascorbate,
@@ -54,7 +54,7 @@ class Education extends Component {
 
                         <br/>
                     <h3>
-                     References for this Information: How does Vitamin C Help Skin? paulaschoice.com. 
+                     Reference: How does Vitamin C Help Skin? Source: paulaschoice.com. 
                     </h3>
 
                 </div>

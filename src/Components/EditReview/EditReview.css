@@ -1,8 +1,6 @@
 #edit-review-container {
   padding: 75px;
   height: 100vh;
-  background-image: url("../images/brushes.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: #f2e7e7;
 }
 /*# sourceMappingURL=EditReview.css.map */

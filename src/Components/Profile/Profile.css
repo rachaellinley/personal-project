@@ -11,7 +11,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #d8d4d4;
+  background-color: #f2e7e7;
 }
 
 #greeting {
@@ -26,6 +26,7 @@
   display: -ms-flexbox;
   display: flex;
   width: 65%;
+  height: 20%;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;

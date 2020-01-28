@@ -17,7 +17,7 @@
 }
 
 #question {
-  font-size: xx-large;
+  font-size: x-large;
   color: brown;
 }
 
@@ -32,24 +32,19 @@
 #ingredients-container {
   width: 65%;
   height: 45%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
   margin: 25px;
   background-color: rgba(255, 255, 255, 0.845);
 }
 
 @media screen and (max-width: 700px) {
+  #education-container {
+    background-image: none;
+    height: 100vh;
+  }
   #ingredients-container {
-    height: 80%;
-    width: 75%;
+    height: 700px;
+    width: 100%;
+    background-image: none;
   }
 }
 /*# sourceMappingURL=Education.css.map */

@@ -38,7 +38,7 @@ render() {
             <h1 id="add-review"> Add a Product Review </h1>
 
             <select name="category_name" placeholder="Category" onChange={this.handleChange} value={this.state.category_name}>
-                
+            <option value="All"> All Categories </option>
                 <option value="Cleanser"> Cleanser </option>
                 <option value= "Toner"> Toner </option>
                 <option value="Moisturizer"> Moisturizer </option>

@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "AAEA,AAAA,sBAAsB,CAAA;EAClB,OAAO,EAAE,IAAI;EACb,MAAM,EAAC,KAAK;EACZ,gBAAgB,EAAE,4BAA4B;EAC9C,iBAAiB,EAAE,SAAS;EAC5B,eAAe,EAAE,KAAK;CACzB",
+    "mappings": "AAEA,AAAA,sBAAsB,CAAA;EAClB,OAAO,EAAE,IAAI;EACb,MAAM,EAAC,KAAK;EACZ,gBAAgB,EAAG,OAAkB;CAExC",
     "sources": [
         "EditReview.scss"
     ],
