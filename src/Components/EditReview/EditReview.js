@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import {editReview} from "../../redux/reducers/reviewsReducer";
 import {getSession} from '../../redux/reducers/authReducer';
 import "./EditReview.css";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 
 

@@ -3,10 +3,11 @@
 }
 
 #all-reviews-container{
+    
     padding: 75px;
     background-color: rgb(242, 231, 231);
     // color: black;
-    color: navy;
+    color: black;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -19,8 +20,16 @@
     background-color: rgba(255, 255, 255, 0.845);
     display: flex;
     width: 75%;
+    min-height: 10%;
+    
     flex-direction: column; 
     align-items: flex-start;
     padding: 10px;
     margin: 10px;  
+}
+
+@media screen and (max-width: 700px) {
+    #card{
+        min-height: 45%;
+    }  
 }
