@@ -5,8 +5,6 @@ import {getSession} from '../../redux/reducers/authReducer';
 import { withRouter} from "react-router-dom";
 import "./AddReview.css"
 
-
-
 class AddReview extends Component {
     constructor () {
         super();
@@ -24,13 +22,10 @@ class AddReview extends Component {
     
     handleAddReview = () => {
         const { category_name, brand, product, content } = this.state;
-    
         const { addReview } = this.props;
-    
-        addReview({ category_name, brand, product, content })
+        addReview({ category_name, brand, product, content });
        
       }
-
 
 render() {
     return (
@@ -38,7 +33,8 @@ render() {
             <h1 id="add-review"> Add a Product Review </h1>
 
             <select name="category_name" placeholder="Category" onChange={this.handleChange} value={this.state.category_name}>
-            <option value="All"> All Categories </option>
+                
+                <option value="All"> All Categories </option>
                 <option value="Cleanser"> Cleanser </option>
                 <option value= "Toner"> Toner </option>
                 <option value="Moisturizer"> Moisturizer </option>
