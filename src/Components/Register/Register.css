@@ -1,13 +1,16 @@
+#register-box {
+  height: 100%;
+  width: 100%;
+  margin-top: 2px;
+}
+
 #guest {
   text-decoration: none;
+  color: black;
 }
 
 #register {
   color: black;
   font-family: "Roboto Condensed", sans-serif;
-}
-
-#guest {
-  color: black;
 }
 /*# sourceMappingURL=Register.css.map */

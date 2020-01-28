@@ -23,7 +23,6 @@ render() {
                 
             <Login />
             <br/>
-            <br/>
             <Register />
             </div>
           

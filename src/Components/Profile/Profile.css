@@ -11,9 +11,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-image: url(../images/makeup.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: #d8d4d4;
 }
 
 #greeting {

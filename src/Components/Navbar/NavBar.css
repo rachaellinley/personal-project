@@ -39,7 +39,7 @@ header {
   height: 20vh;
   position: fixed;
   right: 0px;
-  top: 80px;
+  top: 75px;
   background: grey;
   -webkit-box-align: right;
       -ms-flex-align: right;
@@ -67,7 +67,7 @@ header {
     top: -1000px;
   }
   100% {
-    top: 80px;
+    top: 65px;
   }
 }
 
@@ -76,7 +76,7 @@ header {
     top: -1000px;
   }
   100% {
-    top: 80px;
+    top: 65px;
   }
 }
 

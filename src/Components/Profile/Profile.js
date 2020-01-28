@@ -58,12 +58,10 @@ class Profile extends Component {
 
                 <Link to='/'><button onClick={this.handleLogout}>Logout</button></Link>
                
-                
                 <AddReview />
 
                 {myReviewsMapped}
                 
-
             </div>
 
         )

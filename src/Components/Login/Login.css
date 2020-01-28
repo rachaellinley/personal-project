@@ -1,4 +1,10 @@
 #welcome {
   color: black;
 }
+
+#login-box {
+  margin-top: 10px;
+  height: 100%;
+  width: 100%;
+}
 /*# sourceMappingURL=Login.css.map */

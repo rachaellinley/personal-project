@@ -15,8 +15,9 @@ class Education extends Component {
     render() {
         return (
             <div id="education-container">
-                <h2 id="spotlight">Ingredient Spotlight</h2>
                 <h1 id="question"> What's in your product? </h1>
+                <h2 id="spotlight">Ingredient Spotlight</h2>
+              
                 
                 <div id="ingredients-container">
 

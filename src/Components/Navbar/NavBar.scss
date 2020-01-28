@@ -9,7 +9,6 @@ header {
 
 .link {
     text-decoration: none;
-    
 }
 
 #site-nav {
@@ -29,14 +28,12 @@ header {
     font-size: larger;  
 
 }
-
-
 .drop-down-menu, .drop-down-menu-open, .drop-down-menu-closed{
     width: 50vw;
     height: 20vh;
     position: fixed;
     right: 0px;
-    top: 80px;
+    top: 75px;
     background: grey;  
     align-items: right;
     padding: 0px;
@@ -61,7 +58,7 @@ header {
         top: -1000px;
     }
     100% {
-        top: 80px;
+        top: 65px;
     }
 }
 

@@ -45,4 +45,11 @@
   margin: 25px;
   background-color: rgba(255, 255, 255, 0.845);
 }
+
+@media screen and (max-width: 700px) {
+  #ingredients-container {
+    height: 80%;
+    width: 75%;
+  }
+}
 /*# sourceMappingURL=Education.css.map */

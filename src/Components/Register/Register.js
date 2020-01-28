@@ -36,7 +36,7 @@ render() {
     }
    
     return (
-        <div>
+        <div id="register-box">
             <h1 id="register"> First time? Please Register </h1>
 
             <input name="first_name" placeholder="first name" value={this.state.first_name} onChange={this.handleChange}/>

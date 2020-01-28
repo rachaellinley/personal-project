@@ -5,7 +5,8 @@
     flex-direction: column;
     align-items: center;
     height:100%;
-    background-image: url("../images/product.jpg");
+   
+    background-image: url("../images/brushes.jpg");
     background-repeat: repeat-y;
     background-size: cover;
 }
@@ -16,4 +17,10 @@
 
 #message-input {
     height: 150px;
+}
+
+@media screen and (max-width: 700px) {
+    #contact-container {
+        height: 80%;
+    }
 }
